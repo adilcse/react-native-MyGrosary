@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'native-base';
 
-class LocationScreen extends React.Component{
+class SearchScreen extends React.Component{
     render(){
         return(
             <View>
-                <Text>LOcation Screen</Text>
+                <Text>Search Screen</Text>
             </View>
         )
     }
 }
-export default LocationScreen;
+export default SearchScreen;

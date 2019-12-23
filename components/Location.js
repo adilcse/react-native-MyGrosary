@@ -15,23 +15,18 @@ const Location = props =>{
       color="black"
       onPress={() => props.navigation.openDrawer()}
     />
-             <TouchableOpacity  style={styles.location}>
+             <TouchableOpacity  style={styles.location}  onPress={() => props.navigation.navigate('LocationScreen')}>
           
          
           <View style={styles.locationText}>
               
             <Text style={styles.upperText}> Location</Text>
-            {/* <SvgUri
-                 width="15"
-                 height="15"
-                  uri="https://image.flaticon.com/icons/svg/67/67347.svg"
-             /> */}
             <LocationIcon width='15' height = '15'/>
   </View >
             <Text style={styles.Address} numberOfLines={1}>  Gudgudjore,Bisra ,Sundargarh,Odisha,India,Home ggj address </Text>
            
            </TouchableOpacity>
-        <TouchableOpacity style={styles.searchContainer}>
+        <TouchableOpacity style={styles.searchContainer}onPress={() => props.navigation.navigate('SearchScreen')}>
         <SearchIcon width='45' height = '40'/>
             </TouchableOpacity>    
         </View>

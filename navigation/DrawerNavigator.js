@@ -4,7 +4,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import SettingsScreen from '../screens/SettingsScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import HomeScreen from '../screens/HomeScreen';
-import MainTabNavigator from './MainTabNavigator';
+import MainTabNavigator,{app} from './MainTabNavigator';
 import {View,Text} from 'react-native';
 import Colors from '../constants/Colors';
 

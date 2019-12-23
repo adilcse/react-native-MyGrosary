@@ -33,6 +33,7 @@ return(
     <Card style={styles.card}>
       <Text> Item 5</Text>
     </Card>
+    
   
     </ScrollView>
     </View>

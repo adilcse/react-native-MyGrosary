@@ -10,8 +10,7 @@ import {
   View,
  
 } from 'react-native';
-
-import { MonoText } from '../components/StyledText';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Location from '../components/Location';
 
 import { DrawerActions } from 'react-navigation-drawer';
@@ -20,7 +19,9 @@ import Card from '../components/homeScreenComponents/Card';
 import Catagories from '../components/homeScreenComponents/Catagories';
 import TodaySpecial from '../components/homeScreenComponents/TodaySpecial';
 import Recent from '../components/homeScreenComponents/Recent';
-export default  HomeScreen=(props)=> {
+import LocationScreen from './LocationScreen'
+
+export default HomeScreen=(props)=> {
 
   return (
     <View style={styles.container}>
@@ -74,3 +75,4 @@ const styles = StyleSheet.create({
   },
  
 });
+

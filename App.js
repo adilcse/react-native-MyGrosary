@@ -8,7 +8,8 @@ import { Ionicons } from '@expo/vector-icons';
 
 
 import Drawer from './navigation/DrawerNavigator';
-import AppNavigator from './navigation/AppNavigator';
+import AppContainer from './components/AppContainer';
+
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
@@ -27,7 +28,7 @@ export default function App(props) {
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
       
        
-        <AppNavigator/>
+        <AppContainer/>
        
       </View>
     
