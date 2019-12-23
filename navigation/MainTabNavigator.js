@@ -5,8 +5,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
-import SettingsScreen from '../screens/SettingsScreen';
-
+import AccountScreen from '../screens/AccountScreen';
+import HistoryScreen from '../screens/HistoryScreen';
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
@@ -53,7 +53,7 @@ FavStack.path = '';
 
 const HistoryStack = createStackNavigator(
   {
-    History: SettingsScreen,
+    History: HistoryScreen,
   },
   config
 );
@@ -64,27 +64,27 @@ HistoryStack.navigationOptions = {
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-bookmark' : 'md-bookmark'} />
   ),
 };
-const SettingsStack = createStackNavigator(
+const AccountStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Account: AccountScreen,
   },
   config
 );
 
-SettingsStack.navigationOptions = {
+AccountStack.navigationOptions = {
   tabBarLabel: 'Account',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-contact' : 'md-contact'} />
   ),
 };
 
-SettingsStack.path = '';
+AccountStack.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   FavStack,
   HistoryStack,
-  SettingsStack,
+  AccountStack,
  
 });
 

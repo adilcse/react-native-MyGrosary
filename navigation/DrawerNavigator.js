@@ -1,16 +1,17 @@
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { createAppContainer, createSwitchNavigator  } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import SettingsScreen from '../screens/SettingsScreen';
 import FavoriteScreen from '../screens/FavoriteScreen';
 import HomeScreen from '../screens/HomeScreen';
 import MainTabNavigator from './MainTabNavigator';
+import {View,Text} from 'react-native';
+import Colors from '../constants/Colors';
 
   
 export  default createDrawerNavigator(
   {
-  
+ 
     Home: {
       navigationOptions: {
         drawerIcon: ({ tintColor }) => (
@@ -18,7 +19,7 @@ export  default createDrawerNavigator(
         ),
         drawerLabel: "Home"
       },
-      screen: HomeScreen
+      screen: MainTabNavigator
     },
 
     Settings: {
