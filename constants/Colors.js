@@ -12,4 +12,5 @@ export default {
   noticeBackground: tintColor,
   noticeText: '#fff',
   demo : 'blue',
+  button : 'blue'
 };

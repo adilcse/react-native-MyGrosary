@@ -26,7 +26,7 @@ const Location = props =>{
             <Text style={styles.Address} numberOfLines={1}>  Gudgudjore,Bisra ,Sundargarh,Odisha,India,Home ggj address </Text>
            
            </TouchableOpacity>
-        <TouchableOpacity style={styles.searchContainer}onPress={() => props.navigation.navigate('SearchScreen')}>
+        <TouchableOpacity style={styles.searchContainer} onPress={() => props.navigation.navigate('SearchScreen')}>
         <SearchIcon width='45' height = '40'/>
             </TouchableOpacity>    
         </View>

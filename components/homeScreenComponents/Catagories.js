@@ -4,8 +4,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View
- 
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 import { Ionicons } from "@expo/vector-icons";
@@ -13,22 +13,30 @@ import { Ionicons } from "@expo/vector-icons";
 import Card from './Card';
 import Colors from '../../constants/Colors'
 
+
 const Catagories=(props)=>{
 return(
   <View style={styles.container}>
     <View style={styles.headingContainer}>
       <Text style={{fontSize : 18,}}>Catagories </Text>
+      <TouchableOpacity  onPress={() =>{
+      
+         props.navigation.navigate('CatagoriesScreen')}
+         }>
       <Card style={styles.heading}>
-      <Text style={{fontSize : 14,color : 'white', paddingRight : 5}}> 
+      <Text style={{fontSize : 14,color : 'white',paddingRight:5 }}> 
         View All</Text>
         <Ionicons name="md-arrow-round-forward" size={25} color="white" />
       
-    </Card></View>
+    </Card></TouchableOpacity></View>
     <ScrollView  style={styles.cardContainer}   contentContainerStyle={styles.contentContainer} horizontal={true} >
-       
-    <Card style={styles.card}>
-      <Text>Catagorie 1 </Text>
-    </Card>
+      <TouchableOpacity onPress={() =>{
+      
+      props.navigation.navigate('ItemsScreen',{cat : 'catagory 1'})}
+      }>
+    <Card style={styles.card} > 
+      <Text>Catagory 1 </Text>
+    </Card></TouchableOpacity> 
     <Card style={styles.card}>
       <Text>Catagorie 2</Text>
     </Card>
@@ -71,16 +79,18 @@ const styles = StyleSheet.create({
     heading : {
      
       flexDirection : 'row',
-     
-      width:95,
+      paddingLeft : 10
+      ,
+      width:96,
        height:40,
-       backgroundColor : Colors.demo
+       backgroundColor : Colors.button
       
     },
     headingContainer : {
-      marginVertical : 10,
- 
+      marginVertical : 5,
+      marginHorizontal:10,
       justifyContent : 'space-between',
+      alignContent : 'center',
       flexDirection : 'row',
     width : '95%',
   
